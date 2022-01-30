@@ -1,4 +1,5 @@
 var editor = null;
+
 window.addEventListener('DOMContentLoaded', onLoad);
 
 function onLoad() {
