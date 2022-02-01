@@ -44,6 +44,15 @@ body {
     font-size: 90%;
 }
 
+#sidebar {
+    background-color: #505050;
+    color: #e0e0e0;
+}
+
+#sidebar li {
+    list-style: none;
+}
+
 
 /* #query_result {
     height: 100px;
