@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/wanarisu/SQL_Tools/issues"
   },
-  "homepage": "https://github.com/wanarisu/SQL_Tools#readme"
+  "homepage": "https://github.com/wanarisu/SQL_Tools#readme",
+  "devDependencies": {
+    "electron": "^10.1.1",
+    "electron-rebuild": "^2.0.1"
+  },
+  "dependencies": {
+    "sqlite3": "^5.0.0"
+  }
 }

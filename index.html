@@ -12,19 +12,45 @@
 </head>
 
 <body>
+    <!-- https://qiita.com/akatsuki174/items/53b7367b04ed0b066bbf -->
     <nav class="navbar bg-secondary" id="header">
-        <h1 class="h5 text-light">Sample-editors</h1>
+        <h1 class="h5 text-light">Sqlite3</h1>
     </nav>
     <div class="row m-0" id="content">
-        <div class="col-12 col-sm-4 col-md-3 col-lg-2 m-0" id="sidebar">*sidebar*</div>
-        <div class="col-12 col-sm-8 col-md-9 col-lg-10 m-0" id="editor_area"></div>
+        <div class="col-sx-3 col-sm-3 col-md-3 col-lg-3 m-0 px-1">
+            <div class="m-0" id="sidebar">
+                <div class="mb-2">
+                    <h4>*sidebar*</h4>
+                    <button onclick="doit()"> aaaabuton </button>
+                </div>
+                <div class='scroll m-0 p-0'>
+                    <pre id='sql_ddl' class='m-0 px-1'></pre>
+                </div>
+            </div>
+        </div>
+        <div class="col-sx-9 col-sm-9 col-md-9 col-lg-9 m-0 pr-1 pl-0">
+            <div class='m-0' id="editor_area"></div>
+            <div id="query_result" class="mt-1 scroll pt-1">
+                <select id="query_text">
+                    <option value="">選択してください</option>
+                </select>
+                <div id='result_text'></div>
+            </div>
+        </div>
     </div>
-    <div class="row m-0" id="footer">* this is footer. *</div>
     <script src="./library/ace/src-min/ace.js"></script>
+    <script src="./library/ace/src-min/ext-language_tools.js"></script>
     <script src="editor.js"></script>
-    <!-- <div id="query_result">
-        SQL Text
-    </div> -->
+    <script>
+        document.getElementById('query_text').onchange = function() {
+            var query_text = document.getElementById('query_text');
+            var changedPref = query_text.value;
+
+            var op = document.getElementById("result_text");
+
+            op.innerHTML = queryResultSet[changedPref];
+        }
+    </script>
 </body>
 
 </html>
