@@ -40,16 +40,6 @@ function createMenu() {
             ]
         },
         {
-            label: 'Mode',
-            submenu: [
-                { label: 'text', click: () => setMode('text') },
-                { label: 'javascript', click: () => setMode('javascript') },
-                { label: 'html', click: () => setMode('html') },
-                { label: 'python', click: () => setMode('python') },
-                { label: 'php', click: () => setMode('php') }
-            ]
-        },
-        {
             label: 'Font',
             submenu: [
                 { label: '9', click: () => setFontSize(9) },
